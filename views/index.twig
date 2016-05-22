@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+	<title>HTML5 Photoshop</title>
+	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="/images/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="/css/paper.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,100' rel='stylesheet' type='text/css'>
+	<script src="/js/jquery-2.1.4.js"></script>
+	<script src="/js/pure.min.js"></script>
+	<script src="/js/paper-full.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="maincontainer" class="clearfix">
+			<div id="menubar-div">
+				<ul>
+					<li tabindex="0">
+						<div id="logo">
+							Cashew Pixel
+						</div>
+					</li>
+					<li tabindex="1">
+						<div class="1-level-item">File</div>
+						<ul class="2-level-list">
+							<li><div id="FileNewMenuItem" class="2-level-item">New</div></li>
+							<li><div class="2-level-item">Open</div></li>
+							<li><div class="2-level-item">Save</div></li>
+							<li><div class="2-level-item">Save as...</div></li>
+						</ul>
+					</li>
+					<li tabindex="2">
+						<div class="1-level-item">Edit</div>
+					</li>
+					<li tabindex="3">
+						<div class="1-level-item">Selection</div>
+					</li>
+					<li tabindex="4">
+						<div class="1-level-item">Find</div>
+					</li>
+					<li tabindex="5">
+						<div class="1-level-item">View</div>
+					</li>
+					<li tabindex="6">
+						<div class="1-level-item">Packages</div>
+					</li>
+					<li tabindex="7">
+						<div class="1-level-item">Window</div>
+					</li>
+					<li tabindex="8">
+						<div class="1-level-item">Help</div>
+					</li>
+				</ul>
+			</div>
+			<div id="toolbar-div">
+				<ul>
+					<li><div id="mouse-tool" class="tool"></div></li>
+					<li>
+						<div id="selection-tool" class="tool multi" tabindex="11"></div>
+						<span class="multi-tool-arrow"></span>
+					</li>
+					<li>
+						<div id="rect-tool" class="tool multi" tabindex="12"></div>
+						<span class="multi-tool-arrow"></span>
+						<ul>
+							<li>
+								<div id="circle-tool" class="tool multi"></div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div id="panel-div">
+
+			</div>
+			<div id="workbench-div">
+				<ul id="workbench-tab-list">
+					<li tab-id="1">Photoshop.csp</li>
+					<li tab-id="2">Illustrator.csp</li>
+				</ul>
+				<ul id="workbench-content-list">
+					<li class="tab current" tab-id="1">
+						<canvas id="canvas" class="canvas" width="1024" height="768">
+
+						</canvas>
+					</li>
+					<li class="tab" tab-id="2">
+
+					</li>
+				</ul>
+			</div>
+			<div id="footer">
+				<div id="magnifier">
+					<input id="magnifier-textfield" type="text" value="100%"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/js/Guid.js"></script>
+	<script src="/js/Html5photoshop.js"></script>
+  <script src="/js/Magnifier.js"></script>
+	<script src="/js/Panels.js"></script>
+	<script src="/js/File_New.js"></script>
+	<script src="/js/Tools.js"></script>
+	<script>
+	$(document).ready(function() {
+		var App = new Html5Photoshop();
+		App.Init();
+		Panel.Init();
+		Tool.Init();
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+* {
+	outline: none;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+input, select {
+	-ms-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	border: 2px solid #666;
+	padding: 1px 6px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 90%;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+#wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+#maincontainer {
+	width: 100%;
+	height: calc(100%);
+}
+
+#menubar-div {
+	width: 100%;
+	height: 48px;
+	background: #cbcbcb;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #333;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 200;
+}
+
+#menubar-div > ul {
+	line-height: 46px;
+	font-size: 100%;
+}
+
+#menubar-div > ul > li {
+	float: left;
+	margin: 0;
+	height: 46px;
+	position: relative;
+}
+
+#menubar-div > ul > li > div {
+	padding: 0 10px;
+	display: block;
+}
+
+#menubar-div > ul li:hover {
+	background: #0b5ae8;
+	color: #fff;
+}
+
+#menubar-div > ul > li li {
+	display: none;
+	color: #000;
+}
+
+#menubar-div > ul > li:focus li {
+	display: block;
+}
+
+#menubar-div > ul > li:focus ul {
+	position: absolute;
+	left: 0;
+	top: 47px;
+	background: #cbcbcb;
+	border: 1px solid #333;
+}
+
+#menubar-div > ul > li:focus li {
+	display: block;
+	line-height: 24px;
+	white-space:nowrap;
+}
+
+#menubar-div > ul > li:focus li > div {
+	padding: 6px 15px;
+}
+
+#logo {
+	font-weight: bold;
+}
+
+#toolbar-div {
+	width: 79px;
+	height: calc(100% - 48px);
+	background: #535353;
+	float: left;
+	border-right: 1px solid #333;
+	box-sizing: border-box;
+}
+
+#toolbar-div > ul > li {
+	width: 28px;
+	height: 28px;
+	margin: 5px;
+	float: left;
+	position: relative;
+	overflow: visible;
+}
+
+#toolbar-div > ul > li .multi-tool-arrow{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	width: 6px;
+	height: 6px;
+	background: url('/images/tools/tool-arrow-3px.png') 2px 2px no-repeat no-repeat;
+}
+
+#toolbar-div > ul > li .tool{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #cbcbcb;
+}
+
+#toolbar-div > ul > li .tool:hover{
+	border: 1px solid #000;
+}
+
+#toolbar-div > ul > li .tool:focus + ul {
+	display: block;
+}
+
+#toolbar-div > ul > li > ul {
+	display: none;
+}
+
+#toolbar-div > ul > li > ul > li {
+	width: 28px;
+	height: 28px;
+	margin-bottom: 5px;
+}
+
+#mouse-tool {
+	background: url('/images/tools/mouse-tool.png');
+}
+
+#selection-tool {
+	background: url('/images/tools/selection-tool.png');
+}
+
+#rect-tool {
+	background: url('/images/tools/rect-tool.png');
+}
+
+#panel-div {
+	display: none;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+}
+
+.panel {
+	padding: 10px 20px;
+	color: #666;
+}
+
+.panel th, .panel td {
+	padding: 5px;
+}
+
+.panel th {
+	text-align: right;
+}
+
+#workbench-div  {
+	width: calc(100% - 79px);
+	height: calc(100% - 48px - 25px);
+	float: right;
+	background: #535353;
+	overflow: scroll;
+	position: relative;
+	z-index: 100;
+}
+
+#workbench-tab-list {
+	overflow: hidden;
+}
+
+#workbench-tab-list li{
+	background: #333;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	width: 200px;
+	height: 20px;
+	line-height: 20px;
+	float: left;
+	margin-right: 1px;
+	padding: 3px 5px;
+	color: #ccc;
+}
+
+#workbench-content-list {
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	border-bottom: none;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 26px;
+	right: 0;
+	bottom: 0;
+}
+
+#workbench-content-list .tab {
+	position: absolute;
+	display: none;
+	background: #333;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#workbench-content-list .tab.current {
+	display: block;
+}
+
+#file-new-panel-div {
+	background: #ccc;
+	border: 1px solid #666;
+	color: #666;
+	position: absolute;
+	top: 150px;
+	left: 150px;
+}
+
+#file-new-panel-div legend {
+}
+
+#file-new-panel-div input {
+	width: 180px;
+	color: #444;
+}
+
+#file-new-panel-div select {
+	width: 180px;
+	padding: 1px;
+	border-width: 2px;
+	color: #444;
+}
+
+#footer {
+	width: calc(100% - 79px);
+	height: 24px;
+	background: #535353;
+	border-top: 1px solid #333;
+	float: right;
+}
+
+#magnifier-textfield {
+	background: #3a3a3a;
+	color: #fff;
+	border: 0;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 10px;
+	width: 80px;
+}
